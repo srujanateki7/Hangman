@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Start Game  -->
+    <div class="startGame">
+        <button onclick="startGame()">start game</button>
+      </div>
+    <main>
+        <h1>Hangman</h1>
+        <span> Find the hidden word - Enter a letter</span>
+        <div class="hangman-figure-container">
+            <svg>
+                <!-- HANGMAN POLE -->
+                <line class="hangman-pole" x1="57" y1="20" x2="156" y2="20" /> <!--pole-top -->
+                <line class="hangman-pole" x1="153" y1="20" x2="153" y2="50" /> <!--rope-lenght-->
+                <line class="hangman-pole" x1="60" y1="20" x2="60" y2="300" /> <!-- pole-height -->
+                <line class="hangman-pole" x1="20" y1="300" x2="150" y2="300" /> <!--pole-Bottom -->
+
+                <!-- HANGMAN HEAD -->
+                <circle class="hangman-body-parts" cx="155" cy="80" r="30" />
+                <circle class="hangman-body-parts" cx="145" cy="70" r="1" />
+                <circle class="hangman-body-parts" cx="165" cy="70" r="1" />
+                <path class="hangman-body-parts" d=" M 142 92 A 89 87 254 0 1 165 89" /> <!-- Circle Arc-->
+
+
+                <!-- HANGMAN ARMS -->
+                <line class="hangman-body-parts" x1="155" y1="120" x2="120" y2="180" /> <!--Left Arm-->
+                <line class="hangman-body-parts" x1="155" y1="120" x2="190" y2="180" /> <!-- Righ Arm-->
+
+                <!-- Hangman BODY -->
+                <line class="hangman-body-parts" x1="155" y1="110" x2="155" y2="180" />
+
+                <!-- Hangman Legs -->
+                <line class="hangman-body-parts" x1="155" y1="180" x2="140" y2="250" /> <!--Left Leg-->
+                <line class="hangman-body-parts" x1="155" y1="180" x2="180" y2="250" /> <!--Right Leg-->
+            </svg>
+
+            <!-- WRONG LETTERS BLOCK -->
+            <div class="wrong-letters-container">
+                <div id="wrong-letters"></div>
+                <!-- WORDS BLOCK -->
+                <div class="words">
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- POPUP CONTAINER -->
+    <div class="popup-container">
+        <div id="popUp">
+            <h3 id="final-message">&#128513;</h3>
+            <button id="playAgain-button">Play Again</button>
+        </div>
+    </div>
+    <!-- NOTIFICATION BANNER -->
+    <div class="notification-banner">
+        <span>You have already entered this letter</span>
+    </div>
+    <!-- GAME OVER  -->
+    <div class="popupGameOver">
+        <button>game over</button>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

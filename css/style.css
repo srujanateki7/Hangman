@@ -1,0 +1,231 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+   
+}
+.startGame{
+    background-color: black;
+}
+
+.startGame button{
+    background-color:transparent;
+    color:white;
+    position:absolute;
+    top: 310px;
+    left: 655px;
+    text-transform:uppercase;
+    font-style:italic;
+    font-size: larger;
+    border:2px solid white;
+    padding:20px;
+    border-radius:15px 50px 30px; 
+ 
+  }
+  .startGame button :active{
+    transform: scale(0.95);
+    overflow:hidden;
+    
+  }
+  .startGame button:focus{
+    outline: 0;
+}
+
+body{
+    background-color:/* rgba(130, 124, 155, 0.923)*/ #1d2a35;
+    color:white;
+    padding: 50px;
+    position: relative;
+    
+}
+main{
+    display: none;
+}
+main h1{
+    display: flex;
+    justify-content: center;
+}
+body span{
+   padding: 30px 0 0 0;
+   font-size: 20px;
+}
+
+.hangman-figure-container{
+    position: relative;
+   
+}
+svg{  
+    padding: 30px 20px;
+    height:400px;
+    width:250px;
+    stroke:white;
+    stroke-width: 6;  
+    fill:transparent;
+}
+.hangman-figure-container h3{
+    position:absolute;
+    text-transform: uppercase;
+    top:10px;
+    left:500px;
+}
+.hangman-body-parts{
+    display:none;
+}
+.wrong-letters-container{
+position: absolute;
+top: 10px;
+left: 490px;
+display: flex;
+flex-direction: column;
+}
+.wrong-letters span{
+    margin:auto;
+}
+.letter{
+    border-bottom: 2px solid white;
+    display: inline-flex;
+    font-size:20px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.words{
+    display: flex;
+    gap:5px;
+    position:absolute;
+    top:320px;
+    right:370px;
+}
+.popup-container{
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    padding:10px 20px;
+    border:none;
+    display: none;
+    border-radius: 15px;
+    background-color: peachpuff;
+    color:black;
+    box-shadow: 3px 2px rgb(125, 116, 116);
+    right:620px;
+    bottom: 8px;
+ 
+}
+.popup-container button{
+    width:50%;
+    color:black;
+    font-size: medium;
+    padding:5px;
+    margin-top: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin:10px 60px;
+    bottom: 10px;
+}
+.popup-container button:active{
+    transform: scale(0.95);
+    overflow:hidden;
+}
+.popup-container button:focus{
+    outline: 0;
+}
+main.popup-container{
+    filter:blur(5px);
+    background: rgba(0,0,0,0.08);
+         
+}
+.notification-banner{
+    padding:15px;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: -190px;
+    right:580px;
+    transition: transform 0.5s ease-in-out; 
+    display: none; 
+}
+
+.notification-banner span{
+    margin:0;
+}
+
+.notification-banner.show{
+    transform: translateY(-80px);
+}
+
+
+/* GAME OVER */
+.popupGameOver button {
+    background-color:transparent;
+    color:white;
+    position:absolute;
+    bottom:150px;
+    left:656px;
+    width: fit-content;
+    box-shadow: 10px 12px 20px red;
+    border-radius:15px 50px 30px;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-style: italic;
+    border:2px solid red;
+    padding:10px;
+    display:none;
+     
+}
+
+
+
+
+
+/* MOBILE */
+@media only screen and (max-width: 600px){
+    .startGame button{
+        top: 310px;
+        left: 135px;
+    }
+
+    body{
+        /* color:rgb(241, 181, 170); */
+        background-color: #1d2a35;
+        /* background-image: url('../img/bg.jpg'); */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+  
+    }
+    main h1{
+        font-size: 20px;
+    }
+    main span{
+        font-size: 16px;
+    }
+    .words{
+        top: 335px;
+        right: 143px;
+    }
+    .wrong-letters-container{
+        top:10px;
+        left: 230px;
+    }
+    .popup-container{
+        right: 60px;
+        bottom: 290px;
+    }
+    .notification-banner{
+        right:16px;
+        
+    }
+    .notification-banner.show{
+        transform: translateY(-80px);
+    }
+}
+  
+
+
+
+
